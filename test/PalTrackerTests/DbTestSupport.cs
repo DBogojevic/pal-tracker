@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿using System.Collections.Generic;
 using System.Linq;
 using MySql.Data.MySqlClient;
@@ -45,6 +46,8 @@ namespace PalTrackerTests
         }
     }
 =======
+=======
+>>>>>>> efe61da... Add tests for Database lab
 ﻿using System.Collections.Generic;
 using System.Linq;
 using MySql.Data.MySqlClient;
@@ -90,5 +93,8 @@ namespace PalTrackerTests
             return result;
         }
     }
+<<<<<<< HEAD
+>>>>>>> efe61da... Add tests for Database lab
+=======
 >>>>>>> efe61da... Add tests for Database lab
 }

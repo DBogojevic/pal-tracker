@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -180,6 +181,8 @@ namespace PalTrackerTests
         );
     }
 =======
+=======
+>>>>>>> efe61da... Add tests for Database lab
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -360,5 +363,8 @@ namespace PalTrackerTests
             "SELECT id, project_id, user_id, date, hours FROM time_entries"
         );
     }
+<<<<<<< HEAD
+>>>>>>> efe61da... Add tests for Database lab
+=======
 >>>>>>> efe61da... Add tests for Database lab
 }
