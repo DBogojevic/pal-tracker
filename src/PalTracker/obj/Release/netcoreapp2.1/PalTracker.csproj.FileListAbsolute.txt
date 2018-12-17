@@ -1,0 +1,14 @@
+C:\Dejan\PAL\workspace\pal-tracker\src\PalTracker\bin\Release\netcoreapp2.1\PalTracker.deps.json
+C:\Dejan\PAL\workspace\pal-tracker\src\PalTracker\bin\Release\netcoreapp2.1\PalTracker.runtimeconfig.json
+C:\Dejan\PAL\workspace\pal-tracker\src\PalTracker\bin\Release\netcoreapp2.1\PalTracker.runtimeconfig.dev.json
+C:\Dejan\PAL\workspace\pal-tracker\src\PalTracker\bin\Release\netcoreapp2.1\PalTracker.dll
+C:\Dejan\PAL\workspace\pal-tracker\src\PalTracker\bin\Release\netcoreapp2.1\PalTracker.pdb
+C:\Dejan\PAL\workspace\pal-tracker\src\PalTracker\obj\Release\netcoreapp2.1\PalTracker.csprojAssemblyReference.cache
+C:\Dejan\PAL\workspace\pal-tracker\src\PalTracker\obj\Release\netcoreapp2.1\PalTracker.csproj.CoreCompileInputs.cache
+C:\Dejan\PAL\workspace\pal-tracker\src\PalTracker\obj\Release\netcoreapp2.1\PalTracker.RazorAssemblyInfo.cache
+C:\Dejan\PAL\workspace\pal-tracker\src\PalTracker\obj\Release\netcoreapp2.1\PalTracker.RazorAssemblyInfo.cs
+C:\Dejan\PAL\workspace\pal-tracker\src\PalTracker\obj\Release\netcoreapp2.1\PalTracker.AssemblyInfoInputs.cache
+C:\Dejan\PAL\workspace\pal-tracker\src\PalTracker\obj\Release\netcoreapp2.1\PalTracker.AssemblyInfo.cs
+C:\Dejan\PAL\workspace\pal-tracker\src\PalTracker\obj\Release\netcoreapp2.1\PalTracker.RazorTargetAssemblyInfo.cache
+C:\Dejan\PAL\workspace\pal-tracker\src\PalTracker\obj\Release\netcoreapp2.1\PalTracker.dll
+C:\Dejan\PAL\workspace\pal-tracker\src\PalTracker\obj\Release\netcoreapp2.1\PalTracker.pdb
