@@ -1,0 +1,68 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
+using Steeltoe.CloudFoundry.Connector.MySql.EFCore;
+
+namespace PalTracker
+{
+    public class Startup
+    {
+        public Startup(IConfiguration configuration)
+        {
+            Configuration = configuration;
+        }
+
+        public IConfiguration Configuration { get; }
+
+        // This method gets called by the runtime. Use this method to add services to the container.
+        public void ConfigureServices(IServiceCollection services)
+        {
+			// Add framework services.
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+			 
+			// Add database services
+			services.AddDbContext<TimeEntryContext>(options => options.UseMySql(Configuration));
+			
+			services.AddSingleton(sp => new WelcomeMessage(
+               Configuration.GetValue<string>("WELCOME_MESSAGE", "WELCOME_MESSAGE not configured.") 
+           ));
+
+		   services.AddSingleton(sp => new CloudFoundryInfo(
+                Configuration.GetValue<string>("PORT", "PORT not found."),
+                Configuration.GetValue<string>("MEMORY_LIMIT", "MEMORY_LIMIT not found."),
+                Configuration.GetValue<string>("CF_INSTANCE_INDEX", "CF_INSTANCE_INDEX not found."),
+                Configuration.GetValue<string>("CF_INSTANCE_ADDR", "CF_INSTANCE_ADDR not found.")
+			));
+		   
+		   // Replace in-mem repository with real implementation
+		   // services.AddSingleton<ITimeEntryRepository, InMemoryTimeEntryRepository>();
+		   services.AddScoped<ITimeEntryRepository, MySqlTimeEntryRepository>();
+		   
+		}
+
+        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        {
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
+            else
+            {
+                app.UseHsts();
+            }
+
+            app.UseHttpsRedirection();
+            app.UseMvc();
+        }
+    }
+}
