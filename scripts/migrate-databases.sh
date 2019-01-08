@@ -13,6 +13,8 @@ echo "Opening ssh tunnel to $ip_address"
 cf ssh -N -L 63306:$ip_address:3306 $1 &
 cf_ssh_pid=$!
 
+echo "Changed to enable commit and test"
+
 echo "Waiting for tunnel"
 sleep 5
 
