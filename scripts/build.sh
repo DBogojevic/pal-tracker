@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -e
+set -ex
 
 DISABLE_AUTH=true dotnet test ./test/PalTrackerTests
 artifacts_path=/tmp/artifacts
