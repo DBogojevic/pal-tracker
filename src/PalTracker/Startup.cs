@@ -33,6 +33,7 @@ namespace PalTracker
 			// Add framework services.
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 			
+			
             // Add database services
             services.AddDbContext<TimeEntryContext>(options => options.UseMySql(Configuration));
 			
