@@ -5,5 +5,5 @@ applications:
   routes:
   - route: db-pal-tracker.apps.pikes.pal.pivotal.io
   env:
-    WELCOME_MESSAGE: Hello from the production environment
+    WELCOME_MESSAGE: Hello from the production environment - new deployment
     
