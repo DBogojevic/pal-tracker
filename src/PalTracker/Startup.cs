@@ -36,6 +36,7 @@ namespace PalTracker
 			
             // Add database services
             services.AddDbContext<TimeEntryContext>(options => options.UseMySql(Configuration));
+		    services.AddCloudFoundryActuators(Configuration);
 			
 			services.AddSingleton(sp => new WelcomeMessage(
                Configuration.GetValue<string>("WELCOME_MESSAGE", "WELCOME_MESSAGE not configured.") 
@@ -52,7 +53,6 @@ namespace PalTracker
 		   // services.AddSingleton<ITimeEntryRepository, InMemoryTimeEntryRepository>();
 		   services.AddScoped<ITimeEntryRepository, MySqlTimeEntryRepository>();
 		   
-		   services.AddCloudFoundryActuators(Configuration);
 
            // add health check
            services.AddScoped<IHealthContributor, TimeEntryHealthContributor>();
